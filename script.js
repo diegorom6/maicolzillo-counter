@@ -24,7 +24,7 @@
         x = setInterval(function() {    
   
           const now = new Date().getTime(),
-                distance = countDown - now;
+                distance = countDown - 11 * 60 * 60 * 1000 - now;
   
           document.getElementById("days").innerText = Math.floor(distance / (day)),
             document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
@@ -33,7 +33,7 @@
   
           //do something later when date is reached
           if (distance < 0) {
-            document.getElementById("headline").innerText = "Ya llegó!!";
+            document.getElementById("headline").innerText = "Maicolzillo se encuentra en Chile - STREAM MAICOLZILLO ❗❗❗";
             document.getElementById("countdown").style.display = "none";
             document.getElementById("content").style.display = "block";
             clearInterval(x);
